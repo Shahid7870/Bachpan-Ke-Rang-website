@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Yatra+One&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fcfbf7;
+  color: #1e293b;
+  overflow-x: hidden;
+}
+
+.hindi-title {
+  font-family: 'Yatra One', cursive, 'Poppins', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}

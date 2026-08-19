@@ -1,0 +1,77 @@
+import React from 'react';
+import { STORE_INFO } from '../data/products';
+import { CheckCircle } from 'lucide-react';
+
+export default function AboutStore() {
+  return (
+    <section id="about" className="py-16 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <div className="lg:col-span-5 grid grid-cols-1 gap-4">
+            <div className="relative rounded-2xl overflow-hidden shadow-xl border border-amber-200 bg-slate-900 p-2">
+              <img 
+                src="/assests/CarryBag.jpeg" 
+                alt="Bachpan Ke Rang Official Bag" 
+                className="rounded-xl w-full h-auto object-cover max-h-96 mx-auto"
+              />
+              <div className="text-center py-2 text-amber-300 text-xs font-semibold">
+                Official Signature Packaging & Brand Guarantee
+              </div>
+            </div>
+          </div>
+
+          <div className="lg:col-span-7 space-y-6">
+            <div className="inline-block text-xs font-bold text-sky-700 bg-sky-50 border border-sky-200 px-3 py-1 rounded-full uppercase tracking-wider">
+              About The Store
+            </div>
+            
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 leading-snug">
+              Welcome to <span className="text-orange-600 hindi-title">बचपन के रंग</span> <br />
+              <span className="text-xl sm:text-2xl text-slate-700 font-semibold">
+                (हमारे संग) — Laukaha, Madhubani
+              </span>
+            </h2>
+
+            <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
+              Founded and managed by <strong>{STORE_INFO.proprietor}</strong>, <em>Bachpan Ke Rang</em> is the premier shopping destination for kids wear and infant accessories in Laukaha Bazaar. We specialize in bringing the highest quality children’s garments, from daily casual sets to grand festive attire.
+            </p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+              {[
+                "Newborn baby gift sets & booties",
+                "Fancy UV protection sunglasses & caps",
+                "Imported breathable cotton tops & shorts",
+                "Grand 3-piece blazers & festive sherwanis",
+                "Comfortable soft-grip footwear & slippers",
+                "Affordable pricing & bulk enquiry support"
+              ].map((item, idx) => (
+                <div key={idx} className="flex items-center gap-2 text-xs sm:text-sm text-slate-700 font-medium">
+                  <CheckCircle className="w-4 h-4 text-emerald-600 shrink-0" />
+                  <span>{item}</span>
+                </div>
+              ))}
+            </div>
+
+            <div className="bg-amber-50 rounded-2xl p-4 border border-amber-200 flex flex-wrap items-center justify-between gap-4">
+              <div>
+                <span className="text-2xl font-extrabold text-orange-600">5.0 ★</span>
+                <span className="text-xs text-slate-600 block">Google Rated Store</span>
+              </div>
+              <div>
+                <span className="text-2xl font-extrabold text-sky-700">1000+</span>
+                <span className="text-xs text-slate-600 block">Happy Parents</span>
+              </div>
+              <div>
+                <span className="text-2xl font-extrabold text-emerald-700">Daily</span>
+                <span className="text-xs text-slate-600 block">7 AM - 9 PM Open</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+  );
+}
