@@ -36,8 +36,15 @@ export default function Hero() {
               </span>
             </h1>
 
-            <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal max-w-2xl mx-auto lg:mx-0">
-              {STORE_INFO.hindiTagline} <i> Visit the top-rated kids clothing store in Laukaha, Madhubani. Explore trendy party wear, frocks, daily wear, soft footwear, sunglasses, and newborn gift sets at wholesale/retail prices!</i>
+            <p className="font-sans text-base sm:text-lg text-slate-700 leading-relaxed max-w-2xl mx-auto lg:mx-0 tracking-normal">
+              <span className="font-semibold text-slate-900 mr-2">
+                {STORE_INFO.hindiTagline}
+              </span>
+              <span className="font-normal text-lg sm:font-medium text-slate-600">
+                Visit the top-rated kids clothing store in Laukaha, Madhubani.
+                Explore trendy party wear, frocks, daily wear, soft footwear,
+                sunglasses, and newborn gift sets at wholesale/retail prices!
+              </span>
             </p>
 
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
@@ -45,7 +52,7 @@ export default function Hero() {
                 href={`https://wa.me/${STORE_INFO.whatsappRaw}?text=${encodeURIComponent("Hi Md Saquib Raza, I would like to see the latest collection at Bachpan Ke Rang!")}`}
                 target="_blank"
                 rel="noreferrer"
-                className="bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-7 py-3.5 rounded-xl shadow-lg shadow-emerald-600/30 flex items-center gap-3 transition transform hover:-translate-y-0.5"
+                className="bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-7 py-3.5 rounded-xl shadow-md shadow-emerald-600/30 flex items-center gap-3 transition transform hover:-translate-y-0.5"
               >
                 <RiWhatsappLine className="w-5 h-5" />
                 <span>WhatsApp Order</span>
@@ -55,7 +62,7 @@ export default function Hero() {
                 href={STORE_INFO.googleMapsLink}
                 target="_blank"
                 rel="noreferrer"
-                className="bg-sky-600 hover:bg-sky-700 text-white font-bold px-7 py-3.5 rounded-xl shadow-lg shadow-sky-600/30 flex items-center gap-3 transition transform hover:-translate-y-0.5"
+                className="bg-sky-600 hover:bg-sky-700 text-white font-bold px-7 py-3.5 rounded-xl shadow-md shadow-sky-600/30 flex items-center gap-3 transition transform hover:-translate-y-0.5"
               >
                 <MapPin className="w-5 h-5" />
                 <span>Directions on Map</span>
@@ -90,7 +97,7 @@ export default function Hero() {
                   Best Price
                 </div>
                 <div className="text-xs text-slate-500">
-                  উচিত मूल्य पर उपलब्ध
+                  उचित मूल्य पर उपलब्ध
                 </div>
               </div>
             </div>
@@ -100,7 +107,7 @@ export default function Hero() {
             <div className="relative mx-auto max-w-md lg:max-w-none">
               <div className="absolute -inset-2 bg-gradient-to-r from-amber-400 via-orange-400 to-sky-400 rounded-3xl blur-xl opacity-30"></div>
 
-              <div className="relative bg-white rounded-2xl p-3 shadow-2xl border border-amber-100">
+              <div className="relative bg-white rounded-2xl p-3 shadow border border-amber-100">
                 <img
                   src="/assets/ShopName.png"
                   alt="Bachpan Ke Rang - Best Kids Wear Shop in Laukaha Madhubani Bihar"

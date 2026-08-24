@@ -61,7 +61,7 @@ export default function FeaturedCategories() {
                 className="group relative overflow-hidden rounded-2xl bg-slate-50 border border-slate-200 hover:border-orange-400 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col"
               >
                 {/* Image Container fixed with object-contain */}
-                <div className="h-64 sm:h-72 w-full overflow-hidden bg-slate-100 relative flex items-center justify-center p-3">
+                <div className="h-64 sm:h-60 w-full overflow-hidden bg-slate-100 relative flex items-center justify-center p-3">
                   <img
                     src={cat.image}
                     alt={`${cat.title} - Bachpan Ke Rang Laukaha`}
