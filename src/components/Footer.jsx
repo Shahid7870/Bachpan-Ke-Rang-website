@@ -101,7 +101,7 @@ export default function Footer() {
 
         <div className="pt-6 border-t border-slate-900 flex flex-col md:flex-row items-center justify-between text-xs text-slate-500 gap-3">
           <p>
-            © {new Date().getFullYear()} Bachpan Ke Rang. All Rights Reserved.
+            © {new Date().getFullYear()} <span className="text-orange-500">Bachpan Ke Rang</span>. All Rights Reserved.
             Prop. Md Saquib Raza.
           </p>
 

@@ -8,6 +8,7 @@ import VisitingCardSection from './components/VisitingCardSection';
 import LocationContact from './components/LocationContact';
 import Footer from './components/Footer';
 import WhatsAppFloating from './components/WhatsAppFloating';
+import SocialMedia from './components/SocialMedia';
 
 export default function App() {
   return (
@@ -22,6 +23,7 @@ export default function App() {
         <LocationContact />
       </main>
       <Footer />
+      <SocialMedia/>
       <WhatsAppFloating />
     </div>
   );

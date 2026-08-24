@@ -20,26 +20,26 @@ export default function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
             <div className="inline-flex flex-wrap items-center justify-center gap-2 bg-orange-100/80 text-orange-800 px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold tracking-wide border border-orange-200 shadow-xs">
-  <Sparkles className="w-4 h-4 text-orange-600 shrink-0" />
-  <span>Laukaha's #1 Kids Fashion Hub</span>
-  <span className="text-orange-400 font-bold">•</span>
-  <span className="text-orange-900 uppercase tracking-widest text-[11px] sm:text-xs">
-    FASHION • ACCESSORIES • GIFTS
-  </span>
-</div>
+              <Sparkles className="w-4 h-4 text-orange-600 shrink-0" />
+              <span>✨ Laukaha's Kids Fashion & Baby Store</span>
+              <span className="text-orange-400 font-bold">•</span>
+              <span className="text-orange-900 uppercase tracking-widest text-[11px] sm:text-xs">
+                FASHION • ACCESSORIES • GIFTS
+              </span>
+            </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-tight">
               <span className="hindi-title text-orange-600">बचपन के रंग</span>{" "}
               <br />
-              <span className="text-sky-800 text-2xl sm:text-3xl lg:text-4xl font-bold">
-                हमारे संग — Premium Kids Wear
+              <span className="text-sky-800 text-2xl sm:text-3xl lg:text-3xl font-bold">
+                हमारे संग — Kids Wear & Baby Essentials
               </span>
             </h1>
 
             <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal max-w-2xl mx-auto lg:mx-0">
-              {STORE_INFO.hindiTagline}. Discover charming suits, party frocks,
-              daily casuals, soft footwear, sunglasses, and adorable gift
-              hampers at wholesale-friendly rates!
+              {STORE_INFO.hindiTagline} <i> Explore stylish party wear, beautiful
+              frocks, comfortable daily wear, soft footwear, sunglasses, and
+              adorable gift hampers at great prices!</i>
             </p>
 
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
@@ -106,7 +106,7 @@ export default function Hero() {
                 <img
                   src="/assests/ShopName.png"
                   alt="Bachpan Ke Rang Main Store Banner"
-                  className="w-full h-auto rounded-xl object-cover shadow-sm"
+                  className="w-full h-full rounded-xl object-cover shadow-sm"
                 />
                 <div className="p-3 bg-amber-50/70 rounded-lg mt-3 flex items-center justify-between text-xs sm:text-sm font-semibold text-slate-800">
                   <span className="flex items-center gap-1.5 text-orange-700">
