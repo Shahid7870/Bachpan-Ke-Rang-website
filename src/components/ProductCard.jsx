@@ -1,62 +1,62 @@
 import React from "react";
-import { MessageSquare } from "lucide-react";
 import { STORE_INFO } from "../data/products";
 import { RiWhatsappLine } from "@remixicon/react";
 
 export default function ProductCard({ product }) {
-  const whatsappOrderMsg = `Hello Bachpan Ke Rang, I want to enquire about "${product.name}" (${product.hindiName}) for age ${product.age}. Please share price & availability.`;
+  // Construct the custom message for this specific product
+  const message = `Hello Md Saquib Raza, I am interested in purchasing: ${product.name} (Code: ${product.id}). Is it available?`;
+
+  // Encode the message to ensure spaces and special characters work safely in URLs
+  const whatsappUrl = `https://wa.me/${STORE_INFO.whatsappRaw}?text=${encodeURIComponent(message)}`;
 
   return (
-    <div className="bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden group">
-      {/* Image Container with full-contain fitting and clean background */}
-      <div className="relative h-72 sm:h-80 w-full overflow-hidden bg-slate-50 flex items-center justify-center p-2">
-        <img
-          src={product.image}
-          alt={product.name}
-          className="max-h-full max-w-full object-contain object-center group-hover:scale-105 transition duration-500"
-        />
-        {product.tag && (
-          <span className="absolute top-3 left-3 bg-orange-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow z-10">
-            {product.tag}
-          </span>
-        )}
-        <span className="absolute bottom-3 left-3 bg-slate-900/80 backdrop-blur-sm text-white text-xs font-semibold px-2.5 py-1 rounded-lg z-10">
-          Age: {product.age}
-        </span>
-      </div>
+    <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between">
+      <div>
+        {/* Product Image */}
+        <div className="h-64 sm:h-72 w-full bg-slate-100 overflow-hidden relative flex items-center justify-center p-3">
+          <img
+            src={product.image}
+            alt={`${product.name} - Bachpan Ke Rang`}
+            className="max-h-full max-w-full object-contain hover:scale-105 transition-transform duration-300"
+          />
+          {product.tag && (
+            <span className="absolute top-3 left-3 bg-orange-600 text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full shadow-sm">
+              {product.tag}
+            </span>
+          )}
+        </div>
 
-      <div className="p-5 flex-1 flex flex-col justify-between">
-        <div>
-          <h3 className="font-bold text-slate-800 text-base sm:text-lg leading-snug group-hover:text-orange-600 transition">
-            {product.name}
-          </h3>
-          <p className="text-xs font-semibold text-amber-700 mt-0.5">
+        {/* Product Information */}
+        <div className="p-4 sm:p-5">
+          <div className="flex justify-between items-start gap-2 mb-1">
+            <h3 className="font-bold text-slate-900 text-base line-clamp-1">
+              {product.name}
+            </h3>
+          </div>
+          <p className="text-sm font-semibold text-orange-600 mb-2">
             {product.hindiName}
           </p>
-          <p className="text-xs text-slate-500 mt-2.5 line-clamp-2">
+          <p className="text-sm text-slate-600 line-clamp-2 mb-3">
             {product.description}
           </p>
-        </div>
-
-        <div className="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between">
-          <div>
-            <span className="text-[11px] text-slate-400 block font-medium">
-              Pricing
-            </span>
-            <span className="text-xs font-bold text-emerald-700">
-              Best Wholesale/Retail
-            </span>
+          <div className="inline-block bg-slate-100 text-slate-700 text-[12px] font-medium px-2.5 py-1 rounded-md mb-4">
+            Age Group: {product.age}
           </div>
-          <a
-            href={`https://wa.me/${STORE_INFO.whatsappRaw}?text=${encodeURIComponent(whatsappOrderMsg)}`}
-            target="_blank"
-            rel="noreferrer"
-            className="bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold px-4 py-2.5 rounded-xl flex items-center gap-1.5 shadow-sm transition transform active:scale-95"
-          >
-            <RiWhatsappLine className="w-5 h-5" />
-            <span>Enquire on WhatsApp</span>
-          </a>
         </div>
+      </div>
+
+      {/* WhatsApp Enquiry Button */}
+      <div className="p-4 sm:p-5 pt-0">
+        <a
+          href={whatsappUrl}
+          target="_blank"
+          rel="noreferrer"
+          aria-label={`Enquire about ${product.name} on WhatsApp`}
+          className="w-fit bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-bold py-2.5 px-4 rounded-xl flex items-center justify-center gap-2 transition-colors duration-200 shadow-sm"
+        >
+          <RiWhatsappLine className="w-5 h-5" />
+          Enquire on WhatsApp
+        </a>
       </div>
     </div>
   );

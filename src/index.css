@@ -4,17 +4,22 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #fcfbf7;
-  color: #1e293b;
-  overflow-x: hidden;
-}
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
 
-.hindi-title {
-  font-family: 'Yatra One', cursive, 'Poppins', sans-serif;
-}
+  body {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #fcfbf7;
+    color: #1e293b;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 
-html {
-  scroll-behavior: smooth;
+  .hindi-title {
+    font-family: 'Yatra One', cursive, 'Poppins', sans-serif;
+  }
 }

@@ -1,8 +1,7 @@
 import React from "react";
 import { STORE_INFO } from "../data/products";
-import { MapPin, Phone, Clock, MessageSquare, Navigation } from "lucide-react";
+import { MapPin, Phone, Clock, Navigation } from "lucide-react";
 import { RiWhatsappLine } from "@remixicon/react";
-
 
 export default function LocationContact() {
   return (
@@ -10,14 +9,13 @@ export default function LocationContact() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-12">
           <span className="text-xs font-bold text-sky-700 uppercase tracking-widest">
-            Visit Us In Person
+            Visit Our Store in Laukaha
           </span>
           <h2 className="text-3xl font-extrabold text-slate-900 mt-1 tracking-tight">
             Store Location & Contact Details
           </h2>
-          <p className="text-sm text-slate-500 mt-2">
-            We are conveniently located at Thana Chowk, Laukaha Bazaar in
-            Madhubani district.
+          <p className="text-sm text-slate-600 mt-2">
+            Visit the best kids wear and baby dress shop located conveniently at Thana Chowk, Laukaha Bazaar, Madhubani District, Bihar.
           </p>
         </div>
 
@@ -39,7 +37,7 @@ export default function LocationContact() {
                 <MapPin className="w-5 h-5 text-orange-400 shrink-0 mt-0.5" />
                 <div>
                   <div className="font-semibold text-slate-200">
-                    Address / पता:
+                    Store Address / पता:
                   </div>
                   <div className="text-slate-300 text-xs sm:text-sm mt-0.5 leading-relaxed">
                     <span className="block font-medium text-slate-100">
@@ -91,12 +89,12 @@ export default function LocationContact() {
                 <span>Open in Google Maps</span>
               </a>
               <a
-                href={`https://wa.me/${STORE_INFO.whatsappRaw}?text=Hello%20Md%20Saquib%20Raza,%20I%20need%20assistance.`}
+                href={`https://wa.me/${STORE_INFO.whatsappRaw}?text=${encodeURIComponent("Hello Md Saquib Raza, I need directions to Bachpan Ke Rang store in Laukaha.")}`}
                 target="_blank"
                 rel="noreferrer"
                 className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 rounded-xl flex items-center justify-center gap-2 shadow-md transition"
               >
-                <RiWhatsappLine  className="w-5 h-5" />
+                <RiWhatsappLine className="w-5 h-5" />
                 <span>Quick WhatsApp Message</span>
               </a>
             </div>
@@ -104,7 +102,7 @@ export default function LocationContact() {
 
           <div className="lg:col-span-7 bg-slate-100 rounded-3xl overflow-hidden shadow-lg border border-slate-200 h-[460px] relative">
             <iframe
-              title="Bachpan Ke Rang Location Map"
+              title="Bachpan Ke Rang Location Map - Laukaha Bihar"
               src="https://maps.google.com/maps?q=GFXC%2BPR8%2C%20Laukaha%2C%20Bihar%20847421&t=&z=15&ie=UTF8&iwloc=&output=embed"
               className="w-full h-full border-0"
               allowFullScreen=""
@@ -112,9 +110,9 @@ export default function LocationContact() {
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
             <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-sm p-3 rounded-xl shadow-md border border-slate-200 text-xs">
-              <div className="font-bold text-slate-800">Bachpan Ke Rang</div>
+              <div className="font-bold text-slate-800">Bachpan Ke Rang (लौकहा)</div>
               <div className="text-slate-500 text-[11px]">
-                GFXC+PR8, Laukaha, Bihar 847421
+                Thana Chowk, Laukaha, Bihar 847421
               </div>
             </div>
           </div>

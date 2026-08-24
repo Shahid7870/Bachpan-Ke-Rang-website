@@ -12,7 +12,7 @@ import SocialMedia from './components/SocialMedia';
 
 export default function App() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-white text-slate-900 selection:bg-orange-500 selection:text-white">
       <Navbar />
       <main className="flex-1">
         <Hero />
@@ -23,7 +23,9 @@ export default function App() {
         <LocationContact />
       </main>
       <Footer />
-      <SocialMedia/>
+      
+      {/* Floating Action Bars */}
+      <SocialMedia />
       <WhatsAppFloating />
     </div>
   );

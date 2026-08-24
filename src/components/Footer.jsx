@@ -10,8 +10,8 @@ export default function Footer() {
           <div className="md:col-span-2 space-y-4">
             <div className="flex items-center space-x-3">
               <img
-                src="/assests/logo.png"
-                alt="Logo"
+                src="/assets/logo.png"
+                alt="Bachpan Ke Rang - Best Kids Shop in Laukaha"
                 className="w-12 h-12 rounded-full border border-amber-400 object-cover"
               />
               <div>
@@ -19,14 +19,14 @@ export default function Footer() {
                   बचपन के रंग (हमारे संग)
                 </div>
                 <div className="text-xs text-amber-400 font-medium">
-                  Bachpan Ke Rang • Laukaha
+                  Bachpan Ke Rang • Laukaha, Bihar
                 </div>
               </div>
             </div>
             <p className="text-slate-400 text-xs max-w-md leading-relaxed">
-              Complete kids fashion store providing the best stylish clothing,
-              footwear, sunglasses, newborn gift sets, and celebration outfits
-              at wholesale & retail prices.
+              The premier kids wear and baby fashion destination in Laukaha, Madhubani. 
+              Offering stylish children clothing, footwear, baby accessories, and gift sets 
+              at wholesale and retail prices.
             </p>
           </div>
 
@@ -45,22 +45,22 @@ export default function Footer() {
                   href="#categories"
                   className="hover:text-orange-400 transition"
                 >
-                  Product Categories
+                  Kids Categories
                 </a>
               </li>
               <li>
                 <a href="#catalog" className="hover:text-orange-400 transition">
-                  New Arrivals
+                  Product Catalog
                 </a>
               </li>
               <li>
                 <a href="#about" className="hover:text-orange-400 transition">
-                  About Md Saquib Raza
+                  About Store
                 </a>
               </li>
               <li>
                 <a href="#contact" className="hover:text-orange-400 transition">
-                  Google Map Location
+                  Store Directions
                 </a>
               </li>
             </ul>
@@ -68,7 +68,7 @@ export default function Footer() {
 
           <div>
             <h4 className="text-white font-bold text-sm mb-3 uppercase tracking-wider">
-              Connect With Us
+              Contact & Location
             </h4>
             <div className="space-y-2 text-xs">
               <p className="flex items-center gap-2">
@@ -93,7 +93,7 @@ export default function Footer() {
               </p>
               <p className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 text-sky-400 shrink-0 mt-0.5" />
-                <span>Thana Chowk Laukaha, Bihar 847421</span>
+                <span>Thana Chowk, Laukaha, Madhubani, Bihar 847421</span>
               </p>
             </div>
           </div>

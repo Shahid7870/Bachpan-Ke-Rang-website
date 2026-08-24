@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { CATEGORIES, PRODUCTS } from "../data/products";
 import ProductCard from "./ProductCard";
-import { Sparkles } from "lucide-react";
+import { Sparkles, ShoppingBag } from "lucide-react";
 
 export default function ProductCatalog() {
   const [activeCategory, setActiveCategory] = useState("all");
@@ -22,14 +22,14 @@ export default function ProductCatalog() {
             <Sparkles className="w-3.5 h-3.5" /> Store Catalog
           </div>
           <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight">
-            Our Exclusive Collections
+            Kids Wear & Baby Collections in Laukaha, Bihar
           </h2>
-          <p className="text-sm text-slate-500 mt-2">
-            Click on any item to directly ask Md Saquib Raza for sizes, current
-            wholesale/retail price, and stock.
+          <p className="text-sm text-slate-600 mt-2">
+            Explore trendy boys suits, girls party frocks, newborn gift hampers, and baby shoes in Madhubani district. Click any product to enquire for sizes, wholesale, and retail prices with Md Saquib Raza.
           </p>
         </div>
 
+        {/* Category Filter Buttons */}
         <div className="flex flex-wrap justify-center gap-2 mb-10">
           {CATEGORIES.map((category) => (
             <button
@@ -46,11 +46,30 @@ export default function ProductCatalog() {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          {filteredProducts.map((product) => (
-            <ProductCard key={product.id} product={product} />
-          ))}
-        </div>
+        {/* Product Grid / Empty State */}
+        {filteredProducts.length > 0 ? (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            {filteredProducts.map((product) => (
+              <ProductCard key={product.id} product={product} />
+            ))}
+          </div>
+        ) : (
+          <div className="text-center py-12 bg-white rounded-2xl border border-slate-200 p-8 max-w-md mx-auto">
+            <ShoppingBag className="w-12 h-12 text-slate-400 mx-auto mb-3" />
+            <h3 className="text-base font-bold text-slate-800">
+              No products found in this category
+            </h3>
+            <p className="text-xs text-slate-500 mt-1">
+              Please select another category or check back soon for new arrivals at our Laukaha store.
+            </p>
+            <button
+              onClick={() => setActiveCategory("all")}
+              className="mt-4 text-xs font-bold text-orange-600 hover:underline"
+            >
+              View All Products
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );
