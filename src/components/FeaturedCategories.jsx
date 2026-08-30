@@ -21,7 +21,7 @@ const CATEGORY_CARDS = [
   {
     title: "Suits & Coat Pants",
     subtitle: "कोट-पैंट एवं शेरवानी",
-    desc: "3-piece coat sets, blazers & royal ethnic wear for weddings and celebrations.",
+    desc: "5-piece coat sets, blazers & royal ethnic wear for weddings and celebrations.",
     icon: Award,
     color: "from-emerald-600 to-teal-800",
     image: "/assets/coatPant.png",
